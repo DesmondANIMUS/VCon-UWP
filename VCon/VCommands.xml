@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.1">
+
+  <CommandSet xml:lang="en-us" Name="ExampleAppCommandSet_en-us">
+
+
+    <!--                       Primary page linking                        -->
+
+    <CommandPrefix> VConnect, </CommandPrefix>
+    <Example> Display notice board </Example>
+
+    <Command Name="showNotice">
+      <Example> Display notice board </Example>
+      <ListenFor> display notice [board] </ListenFor>
+      <ListenFor> show [all] notice </ListenFor>
+      <ListenFor> what's latest [around] [vips] </ListenFor>
+      <Feedback>  Coming right up! </Feedback>
+      <Navigate Target="AppFeatures.xaml"/>
+    </Command>
+
+    <Command Name="subSug">
+      <Example> Submit Suggestions </Example>
+      <ListenFor> [I] [need] [to] submit suggestions </ListenFor>
+      <ListenFor> Post a suggestion </ListenFor>
+      <ListenFor> Submit [a] suggestion </ListenFor>
+      <ListenFor> send [a] suggestion </ListenFor>
+      <Feedback> Navigating to the Suggestions Page </Feedback>
+      <Navigate />
+    </Command>
+
+    <Command Name="subFeed">
+      <Example> Submit Feedback </Example>
+      <ListenFor> [I] [need] [to] submit feedback </ListenFor>
+      <ListenFor> Feedback form </ListenFor>
+      <ListenFor> send [a] feedback </ListenFor>
+      <ListenFor> Submit [a] feedback </ListenFor>
+      <Feedback> To the feedback mobile! </Feedback>
+      <Navigate />
+    </Command>
+
+    <Command Name="showfeatures">
+      <Example> Surprise me </Example>
+      <ListenFor> Display [surprise] features </ListenFor>
+      <ListenFor> Go [to] [special] [features] </ListenFor>
+      <Feedback> Raising the curtain </Feedback>
+      <Navigate />
+    </Command>
+
+
+  </CommandSet>
+
+</VoiceCommands>

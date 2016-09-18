@@ -1,0 +1,138 @@
+﻿<Page
+    x:Class="VCon.Pages.CortanaFeats"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VCon.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition FromVerticalOffset="480" />
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="visualGroup">
+
+                <VisualState x:Name="stateSmallPhone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="text.FontSize" Value="30px" />
+                        <Setter Target="inte.FontSize" Value="15px" />
+                        <Setter Target="how.FontSize" Value="30px" />
+                        <Setter Target="in1.FontSize" Value="20px" />
+                        <Setter Target="in5.FontSize" Value="20px" />
+                        <Setter Target="in3.FontSize" Value="20px" />
+                        <Setter Target="in4.FontSize" Value="20px" />
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="statePhone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="360" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="text.FontSize" Value="40px" />
+                        <Setter Target="inte.FontSize" Value="20px" />
+                        <Setter Target="how.FontSize" Value="40px" />
+                        <Setter Target="in1.FontSize" Value="30px" />
+                        <Setter Target="in5.FontSize" Value="30px" />
+                        <Setter Target="in3.FontSize" Value="30px" />
+                        <Setter Target="in4.FontSize" Value="30px" />
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="stateDesktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800">
+                        </AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="text.FontSize" Value="80px" />
+                        <Setter Target="inte.FontSize" Value="40px" />
+                        <Setter Target="how.FontSize" Value="55px" />
+                        <Setter Target="in1.FontSize" Value="45px" />
+                        <Setter Target="in5.FontSize" Value="45px" />
+                        <Setter Target="in3.FontSize" Value="45px" />
+                        <Setter Target="in4.FontSize" Value="45px" />
+                    </VisualState.Setters>
+                </VisualState>
+
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="4*" />
+        </Grid.RowDefinitions>
+
+        <Rectangle Height="Auto" Fill="Gray" Grid.Row="0" />
+        <Rectangle Fill="Black" Grid.Row="1" Height="Auto"
+                   x:Name="blackRec"/>
+
+
+        <!--<Rectangle Fill="Aquamarine" Grid.Row="3"  />-->
+
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Center"
+                   TextWrapping="Wrap" 
+                   Text="Beta Feature" VerticalAlignment="Center"
+                   FontSize="20px" Foreground="White"/>
+
+        <Button x:Name="aboutBut" Content="&#xE112;" Margin="10,0,0,0" 
+                VerticalAlignment="Center" HorizontalAlignment="Left"
+                Foreground="White" Width="50" Click="aboutBut_Click"
+                FontFamily="Segoe MDL2 Assets"/>
+
+        <TextBlock Text="Cortana" Grid.Row="1" HorizontalAlignment="Left"
+                   VerticalAlignment="Top"  
+                   Foreground="White" x:Name="text" Margin="0,0,0,0"/>
+
+        <TextBlock Text="Integration" Grid.Row="1" HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom" 
+                   Foreground="White" x:Name="inte" Margin="0,0,0,0"/>
+
+        <TextBlock Grid.Row="2" VerticalAlignment="Bottom" 
+                   Text="Say: " HorizontalAlignment="Center"
+                   x:Name="how" Margin="0,0,0,0"/>
+
+        <TextBlock Grid.Row="3" VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" TextWrapping="Wrap"
+                   x:Name="in1" Text="In VConnect, Display notice board" 
+                   Margin="0,0,0,0"/>
+
+        <TextBlock Grid.Row="3" VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" TextWrapping="Wrap"
+                   x:Name="in3" Text="In VConnect, Send feedback" 
+                   Margin="0,0,0,0"/>
+
+        <TextBlock Grid.Row="3" VerticalAlignment="Center" 
+                   HorizontalAlignment="Center"  Foreground="BlueViolet"
+                   x:Name="in4" Text="In VConnect, Post suggestion" 
+                   Margin="0,0,0,0" TextWrapping="Wrap"/>
+
+        <TextBlock Grid.Row="3" VerticalAlignment="Center" 
+                   HorizontalAlignment="Center"  Foreground="BlueViolet"
+                   x:Name="in5" Text="In VConnect, Surprise me" 
+                   Margin="0,0,0,0" TextWrapping="Wrap"/>
+
+
+        <StackPanel Grid.Row="2" Width="Auto" Height="Auto"
+                    >
+            <Button x:Name="button" 
+                    HorizontalAlignment="Left" VerticalAlignment="Top" 
+                    Grid.Row="2" Width="12626110" Height="112526211" 
+                    Visibility="Collapsed" 
+                    Click="button_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
